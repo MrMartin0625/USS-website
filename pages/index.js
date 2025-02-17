@@ -39,15 +39,17 @@ const HomePage = () => {
       {/* Interactive Map */}
       <section className="mb-10">
         <h3 className="text-2xl text-green-800 mb-4 text-center">Project Locations</h3>
-        <MapContainer center={position} zoom={13} style={{ height: '400px', width: '100%' }}>
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution="&copy; OpenStreetMap contributors"
-          />
-          <Marker position={position}>
-            <Popup>Urban Sustainability Solutions: Gary, Indiana</Popup>
-          </Marker>
-        </MapContainer>
+        <div className="w-full h-[400px]">
+          <MapContainer center={position} zoom={13} style={{ height: '400px', width: '100%' }}>
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution="&copy; OpenStreetMap contributors"
+            />
+            <Marker position={position}>
+              <Popup>Urban Sustainability Solutions: Gary, Indiana</Popup>
+            </Marker>
+          </MapContainer>
+        </div>
       </section>
 
       {/* Call to Action */}
